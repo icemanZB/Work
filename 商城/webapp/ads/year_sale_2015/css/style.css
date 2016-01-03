@@ -2,9 +2,10 @@
 
 /* common style */
 body {
-	padding: 0; margin: 0;
-	background: #efefef;
+	padding: 0;
+	margin: 0;
 	font-family: "微软雅黑";
+	background: #efefef;
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -12,208 +13,67 @@ a { text-decoration: none; }
 
 table { border-spacing: 0; }
 
-img { border: none; }
-
-.noborder {
-	border: none !important;
-}
-
-.noborderTop {
-	border-top: none !important;
-}
-
-.nobackground { background-image: none !important; }
-
-.text {
-	width: 170px; height: 30px; padding: 0 5px;
-	background: #fff;
-	border: 1px solid #ccc; border-radius: 5px;
-	font-size: 14px;
-}
-
-.short {
-	width: 95px;
-}
-
-.text:disabled {
-	background: #f0f0f0;
-}
+img { border: none; vertical-align: top; }
 
 em, i { font-style: normal; }
 
-dt, dd, ol, ul, li { list-style: none; margin: 0; padding: 0; }
+dt, dd, ol, ul, li { margin: 0; padding: 0; list-style: none; }
 
-.fl { float: left; }
-
-.fr { float: right; }
-
-.tl { text-align: left !important; }
-
-.tr { text-align: right !important; }
-
-.tc { text-align: center !important; }
-
-.vt { vertical-align: top; }
-
-.vm { vertical-align: middle; }
-
-.vb { vertical-align: bottom; }
-
-.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:before,
+.clearfix:after { content: ""; display: table; }
 
 .clearfix:after { clear: both; overflow: hidden; }
 
 .clearfix { *zoom: 1; /* IE 6/7 */ }
 
-/***** padding *****/
-.paddingBottom10 { padding-bottom: 10px !important; }
-
-.paddingBottom15 { padding-bottom: 15px !important; }
-
-/***** margin *****/
-.marginTop0 { margin-top: 0 !important; }
-
-.marginTop10 { margin-top: 10px !important; }
-
-.pd30 { padding: 30px 0 !important; }
-
-/***** font *****/
-.font9 { font-size: 9px; }
-
-.font10 { font-size: 10px; }
-
-.font11 { font-size: 11px; }
-
-.font12 { font-size: 12px; }
-
-.font14 { font-size: 14px; }
-
-.font16 { font-size: 16px; }
-
-.font18 { font-size: 18px; }
-
-.font20 { font-size: 20px; }
-
-.font22 { font-size: 22px; }
-
-.fontYahei { font-family: "微软雅黑"; }
-
-.fontArial { font-family: Arial; }
-
 .deepgray { color: #333 !important; }
 
-.gray { color: #999 !important; }
-
-.lightgray { color: #ccc !important; }
-
-.blue { color: #00a0e9 !important; }
-
-.green { color: #48bd54 !important; }
-
-.orange { color: #f0922d !important; }
-
-.red { color: #eb1212 !important; }
-
-.orangered { color: #fe645a !important; }
-
-.listDisc li {
-	list-style: disc;
-	margin-left: 17px;
+.icon {
+	background: url(../images/icon.png) no-repeat;
 }
 
-.listDecimal li {
-	list-style: decimal;
-	margin-left: 17px;
+.common-top {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 42px;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	background: #f8f8f8;
+	border-bottom: 1px solid #c3c5c9;
 }
 
-.like-icon {
-	width: 20px; height: 17px; display: block;
-	background-position: 0 -88px; background-size: 20px auto;
+.common-top h2 {
+	display: inline-block;
+	margin: auto;
+	font: normal 15px "黑体";
+	color: #eb1212;
 }
 
-.liked-icon {
-	background-position: 0 -118px;
+.common-top a {
+	position: absolute;
 }
 
-.white-bg { background: #fff; }
-
-.gray-bg { background: #efefef !important; }
-
-.icon{
-	background:url(../images/icon.png) no-repeat;
+.common-top .back-step {
+	top: 2px;
+	left: 5px;
+	display: block;
+	width: 38px;
+	height: 38px;
+	background-size: 20px auto;
+	background-position: 9px 10px;
 }
 
-.common-top{
-	width:100%; height:42px; line-height:40px;
-	background:#f8f8f8 ;
-	border-bottom:1px solid #c3c5c9;
-	color:#fff; font-size:18px; font-weight:bold; text-align:center;
-	position:fixed; left:0; top:0; z-index:10;
-}
-.nofixed .common-top{
-	position:relative; margin-bottom:-43px;
-}
-.common-top h2{
-	display:inline-block;
-	color:#eb1212; font:normal 15px "黑体"; margin:auto;
-}
-.common-top h2 a{ position: relative;color:#eb1212; }
-.common-top h2 .has-option{
-	padding: 0 20px 0 0;
-	background-position: right -288px; background-size: 18px auto;
-}
-.common-top a{
-	position:absolute;
-}
-.common-top .logo{ position:static;}
-.common-top .back-step, .common-top .list-icon, .common-top .like-icon{
-	width:38px; height:38px; display:block;
-	background-size:20px auto;
-	top:2px;
-}
-.common-top .back-step{
-	left:5px;
-	background-position:9px 10px;
-}
-.common-top .list-icon{
-	width:30px;
-	height:30px;
-	top:5px;
-	right:13px;
-	background-position:5px -22px;
-}
-.common-top .like-icon{
-	right:9px;
-	background-position:9px -77px;
-}
-.common-top .liked-icon{
-	background-position:9px -107px;
-}
-.common-top .red-button{
-	height:22px; line-height:22px; display:block; padding:0 5px;
-	background-color:#d40000;
-	border-radius:4px;
-	color:#fff; font-size:14px;
-	right:10px; top:13px;
-}
-.common-top .location .icon{
-	width:12px; height:100%; display:inline-block; margin-right:3px;
-	background-position:0 -185px; background-size:33px auto;
-	vertical-align:middle;
-}
-.common-top .top-right{
-	top:3px; right:10px;
-	font-size:12px; font-weight:normal;
-}
-.common-top .top-right.top-right2{
-	right:50px;
-}
-.container{
-	padding:43px 0 0;
+.container {
+	padding: 43px 0 0;
 	margin: 0 auto;
 	max-width: 640px;
 }
-
 
 .container {
 	margin: 0 auto;
@@ -229,14 +89,13 @@ dt, dd, ol, ul, li { list-style: none; margin: 0; padding: 0; }
 
 .banner img {
 	width: 100%;
-	vertical-align: top;
 }
 
-.floatNav{
+.floatNav {
 	height: 42px;
 }
 
-#slider{
+#slider {
 	width: 100%;
 	height: 42px;
 	background: #000000;
@@ -252,11 +111,11 @@ dt, dd, ol, ul, li { list-style: none; margin: 0; padding: 0; }
 
 #nav > a,
 #nav span {
+	display: inline-block;
 	float: left;
+	padding: 10px 8px 9px;
 	font-size: 14px;
 	color: #d9d9d9;
-	display: inline-block;
-	padding: 10px 8px 9px;
 }
 
 #nav span a {
@@ -275,53 +134,54 @@ dt, dd, ol, ul, li { list-style: none; margin: 0; padding: 0; }
 
 .title {
 	position: relative;
-	text-align: center;
-	font-size: 14px;
+	width: 96%;
 	padding: 10px 0;
 	margin: 0;
-	width: 96%;
+	font-size: 14px;
+	text-align: center;
 }
-.title a{
-	color: #999999; font-size: 14px;
+
+.title a {
+	font-size: 14px;
+	color: #999999;
 }
-.title span{
-	width: 15px;
-	height: 0;
+
+.title span {
 	position: absolute;
 	top: 50%;
-	border-bottom:1px solid #999999;
+	width: 15px;
+	height: 0;
 	padding-top: 1px;
 	overflow: hidden;
-}
-.title span:nth-of-type(1){
-	 margin-left: -31px;
-}
-.title span:nth-of-type(2){
-	margin-left: 15px;
+	border-bottom: 1px solid #999999;
 }
 
-.title img {
-	width: 96%;
-	vertical-align: top;
-}
+.title span:nth-of-type(1) { margin-left: -31px; }
+
+.title span:nth-of-type(2) { margin-left: 15px; }
+
+.title img { width: 96%; }
 
 .shopList ul li {
+	float: left;
 	width: 46%;
 	margin: 0 4% 5% 0;
-	float: left;
 }
 
 .shopList ul li img {
 	width: 100%;
-	vertical-align: top;
 	box-shadow: 0 0 1px #ccc;
 }
 
-.gotop{
-	width: 45px; height: 45px;
-	background: rgba(255,255,255,0.9) url(../images/top.png) no-repeat center center;
+.gotop {
+	position: fixed;
+	z-index: 999;
+	right: 15px;
+	bottom: 30px;
+	width: 45px;
+	height: 45px;
+	box-shadow: 0 0 1px #ccc;
+	background: rgba(255, 255, 255, 0.9) url(../images/top.png) no-repeat center center;
 	background-size: 20px auto;
 	border: 1px solid #f2f2f2; border-radius: 30px;
-	box-shadow: 0 0 1px #ccc;
-	position: fixed; right: 15px; bottom: 30px; z-index: 999;
 }

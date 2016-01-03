@@ -1,0 +1,32 @@
+1、-webkit-text-size-adjust: 100%;
+
+在 CSS Mobile Text Size Adjustment Module Level 1 规范中，text-size-adjust 的取值如下：
+取值：auto | none | <percentage(百分比)>
+默认值：auto（iPad 默认值是 none[1]）
+继承性：有
+该属性最先是由 iOS 1.0 引入的，所以本来就是解决移动设备上的问题而出现的。
+通常 iPhone（iOS4）横屏时，「-webkit-text-size- adjust」 的值约为140%。所以如果想取消 iOS 设备横屏切换时候字号变大
+正确的用法应该是：「-webkit-text-size-adjust:100%;」
+
+PC：
+CSS3的一个属性，webkit 内核的浏览器( chrome )中，当在 CSS 中定义的中文 font-size 小于12px的时候，
+浏览器仍然使用12px，这时就可以用 -webkit-text-size-adjust:none;
+注意：-webkit-text-size-adjust 放在 body 中会导致页面缩放失效，不要把 -webkit-text-size-adjust 设置为全局或者可继承的
+chrome更新27正式版后，-webkit-text-size-adjust已经不再得到支持
+Chrome 对于简体中文版最小字号限制为12px，这样会间接带来好多问题。目前似乎只有通过类似 transform:scale(0.875);的方式来解决了。
+当使用transform:scale(0.875)时; 不仅是文字变小了，整个文字所在的容器也同时会变小
+从另外一个方面来说，这也是一件好事，因为一直以来「-webkit-text-size-adjust」属性被滥用
+经常会看到全局设置「-webkit-text-size-adjust:none;」，直接导致了放大网页的时候字号不能改变，可用性大大降低
+
+Mobile：
+iPhone 和 Android 的浏览器纵向 (Portrate mode) 和橫向 (Landscape mode) 模式皆有自动调整字体大小的功能。
+控制它的就是 CSS 中的 -webkit-text-size-adjust。
+-webkit-text-size-adjust:100% 关闭字体大小自动调整功能
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+

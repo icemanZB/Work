@@ -1,0 +1,52 @@
+http协议-缓存控制
+1、用户发起一个http请求，缓存获取到URL，根据URL查找是否有匹配的副本，这个副本可能在内存中，也可能在本地磁盘；
+2、如果请求命中本地缓存则从本地缓存中获取一个对应资源的"copy"(副本)；
+3、检查这个"copy"(副本)是否过期(fresh)，否就直接返回，是就继续向服务器转发请求。HTTP中，通过 Cache-Control 和 Expires
+为文档指定了过期时间，通过对过期时间的判断，缓存就可以知道文档是不是在保质期内。Expires 和 Cache-Control:max-age
+都是来告诉缓存文档有没有过期，为什么需要两个响应首部来做这件简单的事情了？其实这一切都是历史原因，Expires 是 HTTP 1.0中提出来的，
+因为他使用的是绝对日期，如果服务端和客户端时钟不同步的话（实际上这种情况非常常见），缓存可能就会认为文档已经过了保质期。
+4、服务器接收到请求，然后判断资源是否变更，是则返回新内容，否则返回304，未变更，更新过期时间；
+5、客户端更新本地缓存
+
+
+Cache-Control 可选的参数：private、public 、no-cache、max-age、must-revalidate等
+
+缓存分类
+　　1）私有缓存，常见就是我们的浏览器里内置的缓存；
+　　2）公有缓存，常见的就是代理缓存；
+private 修饰私有缓存
+public  修饰公有缓存
+max-age 上文说了过期时间，例如6分钟后过期。
+no-cache  强制客户端跳过步骤2，直接向服务器发送请求。
+must-revalidate  必须重新验证
+no-store：缓存将不存储 response，包括 header 和 body；
+除每次请求都必发送到服务器外，响应代码均是200，且 request 并没有发送"If-Modified-Since"和"If-None-Match"头，
+这意味着缓存的确没有存储 response； 以上三者都是要求客户端每次请求都必须到服务器进行 revalidate ( 使重新生效 )
+此功能还可以通过max-age实现：Cache-Control:max-age=0
+
+实际例子： 禁止浏览器从本地计算机的缓存中访问页面内容
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"/>
+
+在iPhone 手机上默认值是（电话号码显示为拨号的超链接）
+<meta name="format-detection" content="telephone=yes"/>
+可将 telephone=no，则手机号码不被显示为拨号链接
+<meta name="format-detection" content="telephone=no"/>
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
