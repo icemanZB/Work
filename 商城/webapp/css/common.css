@@ -1,6 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
-
 body {
 	padding: 0;
 	margin: 0;
@@ -14,24 +12,6 @@ a { text-decoration: none; }
 table { border-spacing: 0; }
 
 img { border: none; }
-
-.icon {
-	background: url(../images/icon.png) no-repeat;
-}
-
-.text {
-	width: 170px;
-	height: 30px;
-	padding: 0 5px;
-	font-size: 14px;
-	background: #fff;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-}
-
-.text:disabled {
-	background: #f0f0f0;
-}
 
 em, i { font-style: normal; }
 
@@ -56,6 +36,24 @@ dt, dd, ol, ul, li { list-style: none; margin: 0; padding: 0; }
 .deepgray { color: #333 !important; }
 
 .white-bg { background: #fff; }
+
+.icon {
+	background: url(../images/icon.png) no-repeat;
+}
+
+.text {
+	width: 170px;
+	height: 30px;
+	padding: 0 5px;
+	font-size: 14px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.text:disabled {
+	background: #f0f0f0;
+}
 
 .common-top {
 	z-index: 10;
@@ -85,70 +83,35 @@ dt, dd, ol, ul, li { list-style: none; margin: 0; padding: 0; }
 	background-position: 9px 10px;
 }
 
+.common-top .search-bar {
+	position: relative;
+	height: 32px;
+	padding: 0 5px 0 35px;
+	margin: 5px 50px 0 42px;
+	border: none;
+}
+
+.common-top .search-bar .search-icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 32px;
+	height: 32px;
+	background-position: 7px -873px;
+	background-size: 18px auto;
+}
+
+.common-top .search-bar .text {
+	width: 100%;
+	height: 32px;
+	padding: 0;
+}
+
 .container { padding: 43px 0 0; }
 
 .product-list {
 	position: relative;
 	padding-bottom: 20px;
-}
-
-.divided-option {
-	z-index: 9;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 42px;
-	background: url(../images/price-bg.png) repeat-x 0 0/auto 85px;
-	border-top: 1px solid #c7c7c7;
-}
-
-.list-pick {
-	position: relative;
-	display: block;
-	padding: 10px 0;
-	color: #666;
-	font-size: 15px;
-}
-
-.list-pick:after {
-	position: absolute;
-	right: 0;
-	top: 50%;
-	margin-top: -7px;
-	display: block;
-	width: 15px;
-	height: 15px;
-	background-position: right -304px;
-	background-size: 13px auto;
-	content: "";
-	vertical-align: middle;
-}
-
-.list-pick1 {
-	position: relative;
-	display: block;
-	padding: 0 15px 0 0;
-	color: #666;
-	font-size: 12px;
-}
-
-.list-pick1:after {
-	position: absolute;
-	right: 0;
-	top: 50%;
-	width: 15px;
-	height: 15px;
-	display: block;
-	margin-top: -11px;
-	background-position: 0 -301px;
-	background-size: 20px auto;
-	content: "";
-}
-
-.list .filter {
-	width: 100%;
-	background-color: #fff;
 }
 
 .filter { border-bottom: 1px solid #d9d9d9; }
@@ -292,7 +255,7 @@ dt, dd, ol, ul, li { list-style: none; margin: 0; padding: 0; }
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	break: keep-all;
+	word-break: keep-all;
 }
 
 .item-detail .price {
@@ -352,30 +315,6 @@ dt, dd, ol, ul, li { list-style: none; margin: 0; padding: 0; }
 	text-align: center;
 }
 
-
-.common-top .search-bar {
-	position: relative;
-	height: 32px;
-	margin: 5px 50px 0 42px;
-	padding: 0 5px 0 35px;
-	border: none;
-}
-
-.common-top .search-bar .search-icon {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 32px;
-	height: 32px;
-	background-position: 7px -873px;
-	background-size: 18px auto;
-}
-
-.common-top .search-bar .text {
-	width: 100%;
-	height: 32px;
-	padding: 0;
-}
 
 .slider-catalog {
 	width: 100%;
